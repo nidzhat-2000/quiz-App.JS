@@ -1,0 +1,49 @@
+{
+  "datas": [
+    {
+      "question": "The capital of Azerbaijan ?",
+      "answers": ["Baku", "Sheki", "Ganja", "Kalbacar"],
+      "correctAns": 0
+    },
+    {
+      "question": "Which one is Fruit?",
+      "answers": ["Cucumber", "Tomato", "Kiwi", "Rose"],
+      "correctAns": 2
+    },
+    {
+      "question": "Mark Zuckerberg owns?",
+      "answers": ["Amazon", "Meta", "Apple", "Google"],
+      "correctAns": 1
+    },
+    {
+      "question": "Year of neither Messi nor Ronaldo won the Ballon d'Or ?",
+      "answers": ["2012", "2013", "2018", "2021"],
+      "correctAns": 2
+    },
+    {
+      "question": "Turkish Rapper ?",
+      "answers": ["Eminem", "Tupac", "Khose", "Ezhel"],
+      "correctAns": 3
+    },
+    {
+      "question": "What is the currency of Azerbaijan? ?",
+      "answers": ["Manat 💴", "Rub 💵", "Euro 💶", "USD 💲"],
+      "correctAns": 0
+    },
+    {
+      "question": "How many colors are there in a rainbow?",
+      "answers": ["5", "7", "3", "12"],
+      "correctAns": 1
+    },
+    {
+      "question": "Painter of MonaLisa Portret ?",
+      "answers": [
+        "Leonardo da Vinci",
+        "Salvator Munti",
+        "Michelangelo",
+        "Kalbacar"
+      ],
+      "correctAns": 0
+    }
+  ]
+}
