@@ -106,47 +106,46 @@ const questionDelayer = () => {
 let place = 0;
 let result = 0;
 let correct;
-// let interval 
+// let interval
 
 const intervalizer = () => {
-   const interval = Math.round(Math.random() * (7 - 0)) + 0;
-   console.log(interval);
+  const interval = Math.round(Math.random() * (7 - 0)) + 0;
+  console.log(interval);
 
+  const fetchQuestion = async () => {
+    const response = await fetch('./data.json');
+    const data = await response.json();
+    // Fetch Part ⤴
 
-const fetchQuestion = async () => {
-  const response = await fetch('./data.json');
-  const data = await response.json();
-  // Fetch Part ⤴
+    // Finishh game ⤵
+    if (place == data.datas.length) {
+      app.classList.add('blur');
+      endGame.style.opacity = '1';
+      return;
+    }
 
-  // Finishh game ⤵
-  if (place == data.datas.length) {
-    app.classList.add('blur');
-    endGame.style.opacity = '1';
-    return;
-  }
+    ////////////////////////////////////////
+    const question = data.datas[`${interval}`].question;
+    const answers = data.datas[`${interval}`].answers;
+    const first = data.datas[`${interval}`].answers[0];
+    const second = data.datas[`${interval}`].answers[1];
+    const third = data.datas[`${interval}`].answers[2];
+    const fourth = data.datas[`${interval}`].answers[3];
+    correct =
+      data.datas[`${interval}`].answers[data.datas[`${interval}`].correctAns];
 
-  ////////////////////////////////////////
-  const question = data.datas[`${interval}`].question;
-  const answers = data.datas[`${interval}`].answers;
-  const first = data.datas[`${interval}`].answers[0];
-  const second = data.datas[`${interval}`].answers[1];
-  const third = data.datas[`${interval}`].answers[2];
-  const fourth = data.datas[`${interval}`].answers[3];
-  correct =
-    data.datas[`${interval}`].answers[data.datas[`${interval}`].correctAns];
+    questionTab.innerHTML = question;
+    answer1.innerHTML = first;
+    answer2.innerHTML = second;
+    answer3.innerHTML = third;
+    answer4.innerHTML = fourth;
 
-  questionTab.innerHTML = question;
-  answer1.innerHTML = first;
-  answer2.innerHTML = second;
-  answer3.innerHTML = third;
-  answer4.innerHTML = fourth;
+    place++;
+  };
 
-  place++;
+  fetchQuestion();
 };
-
-fetchQuestion();
-};
-intervalizer()
+intervalizer();
 
 allAnswers.forEach(ab =>
   ab.addEventListener('click', e => {
@@ -180,5 +179,3 @@ const questionDelayer = () => {
 
 // Restart game ⤵
 restart.addEventListener('click', e => window.location.reload());
-
-
