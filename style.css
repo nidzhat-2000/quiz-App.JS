@@ -8,13 +8,13 @@
   height: 100vh;
   width: 100%;
   font-family: sans-serif;
-  background-color: rgb(131, 28, 156);
+  /* background-color: rgb(192, 38, 102); */
   color: azure;
   padding-bottom: 100px;
   background-image: linear-gradient(
     to right,
-    rgb(82, 27, 155),
-    rgb(129, 58, 196)
+    rgb(155, 27, 102),
+    rgb(214, 130, 172)
   );
   /* position: relative; */
 }
@@ -86,8 +86,8 @@
   border: 10px solid white;
   background-image: linear-gradient(
     to right,
-    rgb(196, 65, 167),
-    rgb(124, 11, 105)
+    rgb(148, 139, 11),
+    rgb(41, 32, 117)
   );
   border-radius: 50%;
   width: 20%;
@@ -101,7 +101,9 @@
 
 .answer:hover {
   transform: translateY(-8px);
-  transition: all 0.5s;
+  background:rgb(39, 141, 14) ;
+  /* color: aqua; */
+  transition: transform 0.5s;
 }
 
 .result {

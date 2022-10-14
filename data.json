@@ -2,48 +2,137 @@
   "datas": [
     {
       "question": "The capital of Azerbaijan ?",
-      "answers": ["Baku", "Sheki", "Ganja", "Kalbacar"],
-      "correctAns": 0
+      "answers": ["", "Baku", "Sheki", "Ganja", "Kalbacar"],
+      "correctAns": 1
     },
     {
       "question": "Which one is Fruit?",
-      "answers": ["Cucumber", "Tomato", "Kiwi", "Rose"],
-      "correctAns": 2
-    },
-    {
-      "question": "Mark Zuckerberg owns?",
-      "answers": ["Amazon", "Meta", "Apple", "Google"],
-      "correctAns": 1
-    },
-    {
-      "question": "Year of neither Messi nor Ronaldo won the Ballon d'Or ?",
-      "answers": ["2012", "2013", "2018", "2021"],
-      "correctAns": 2
-    },
-    {
-      "question": "Turkish Rapper ?",
-      "answers": ["Eminem", "Tupac", "Khose", "Ezhel"],
+      "answers": ["", "Cucumber", "Tomato", "Kiwi", "Rose"],
       "correctAns": 3
     },
     {
+      "question": "Mark Zuckerberg owns?",
+      "answers": ["", "Amazon", "Meta", "Apple", "Google"],
+      "correctAns": 2
+    },
+    {
+      "question": "Year of neither Messi nor Ronaldo won the Ballon d'Or ?",
+      "answers": ["", "2012", "2013", "2018", "2021"],
+      "correctAns": 3
+    },
+    {
+      "question": "Turkish Rapper ?",
+      "answers": ["", "Eminem", "Tupac", "Khose", "Ezhel"],
+      "correctAns": 4
+    },
+    {
       "question": "What is the currency of Azerbaijan? ?",
-      "answers": ["Manat 💴", "Rub 💵", "Euro 💶", "USD 💲"],
-      "correctAns": 0
+      "answers": ["", "Manat 💴", "Rub 💵", "Euro 💶", "USD 💲"],
+      "correctAns": 1
     },
     {
       "question": "How many colors are there in a rainbow?",
-      "answers": ["5", "7", "3", "12"],
-      "correctAns": 1
+      "answers": ["", "5", "7", "3", "12"],
+      "correctAns": 2
     },
     {
       "question": "Painter of MonaLisa Portret ?",
       "answers": [
+        "",
         "Leonardo da Vinci",
         "Salvator Munti",
         "Michelangelo",
         "Kalbacar"
       ],
-      "correctAns": 0
+      "correctAns": 1
+    },
+    {
+      "question": "Which doesn't include NeighbourCountry?",
+      "answers": [
+        "",
+        "Japan",
+        "Germany",
+        "Poland",
+        "Czech"
+      ],
+      "correctAns": 1
+    },
+    {
+      "question": "Which is impossible ?",
+      "answers": [
+        "",
+        "26/09/2022",
+        "31/04/2017",
+        "28/02/2014",
+        "30/08/2016"
+      ],
+      "correctAns": 2
+    },
+    {
+      "question": "Eiffel Tower places in ?",
+      "answers": [
+        "",
+        "Paris",
+        "Viana",
+        "Berlin",
+        "Madrid"
+      ],
+      "correctAns": 1
+    },
+    {
+      "question": "The biggest Country ?",
+      "answers": [
+        "",
+        "USA",
+        "CANADA",
+        "RUSSIA",
+        "BRASIL"
+      ],
+      "correctAns": 3
+    },
+    {
+      "question": "The highest top of Mountain ?",
+      "answers": [
+        "",
+        "Kangchenjunga",
+        "Lhotse",
+        "Everest",
+        "Makalu"
+      ],
+      "correctAns": 3
+    },
+    {
+      "question": "Type of Modern Human ?",
+      "answers": [
+        "",
+        "Homo Sapiens",
+        "Neanderthalensis",
+        "Homo Erectus",
+        "Homo floresiensis"
+      ],
+      "correctAns": 1
+    },
+    {
+      "question": "What is the highest-rated film on IMDb?",
+      "answers": [
+        "",
+        "GOD FATHER",
+        "Shaswank redemption",
+        "Forest Gump",
+        "Green Mile"
+      ],
+      "correctAns": 1
+    },
+    {
+      "question": "Which one is not olmypics race?",
+      "answers": [
+        "",
+        "Kickboxing",
+        "Boxing",
+        "Swimming",
+        "Judo"
+      ],
+      "correctAns": 1
     }
   ]
 }
