@@ -9,8 +9,8 @@
   width: 100%;
   background-image: linear-gradient(
     to right,
-    rgb(155, 27, 102),
-    rgb(214, 130, 172)
+    rgb(51, 121, 200),
+    rgb(51, 121, 200) /* rgb(214, 130, 172) */
   );
   font-family: sans-serif;
   color: azure;
@@ -40,15 +40,15 @@
 
 .app__name {
   background-image: linear-gradient(
-    to right,
-    rgb(27, 155, 127),
-    rgb(58, 67, 196)
+    to bottom,
+    rgb(199, 70, 38),
+    rgb(105, 14, 14)
   );
   text-align: center;
   margin: 30px;
   width: 350px;
   font-size: 60px;
-  border: solid black;
+  border: none;
   border-radius: 50px;
   padding: 10px;
   background-color: rgb(13, 66, 66);
@@ -91,11 +91,11 @@
 .answer {
   text-align: center;
   margin-bottom: 40px;
-  border: 10px solid white;
+  border: 10px solid rgb(255, 255, 255);
   background-image: linear-gradient(
-    to right,
-    rgb(11, 143, 148),
-    rgb(41, 32, 117)
+    to left,
+    rgb(193, 199, 183),
+    rgb(235, 240, 228) /* rgb(234, 210, 230) */
   );
   border-radius: 50%;
   width: 20%;
@@ -105,12 +105,13 @@
   font-weight: bold;
   cursor: pointer;
   font-size: 20px;
+  color: rgb(5, 31, 31);
 }
 
 .answer:hover {
   transform: translateY(-8px);
+  color: #fff;
   background: rgb(39, 141, 14);
-  /* color: aqua; */
   transition: transform 0.5s;
 }
 
@@ -120,11 +121,12 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     rgb(42, 92, 184),
     rgb(131, 148, 34)
-  );
+  ); */
+  background-color: rgb(133, 56, 7);
   width: 30%;
   font-size: 30px;
   color: rgb(255, 255, 255);
@@ -136,30 +138,29 @@
   border-radius: 40px;
 }
 
-.correct {
-  color: rgb(19, 228, 19);
-}
-
+.correct,
 .percentage {
-  color: rgb(109, 8, 8);
+  color: rgba(71, 203, 93, 0.981);
 }
 
 .restart,
 .start {
-  background-color: rgb(245, 204, 150);
+  /* background-color: rgb(245, 204, 150); */
+  background-color: rgb(12, 47, 87);
   padding: 15px 15px 15px 20px;
   font-size: 25px;
   margin: 20px auto;
   border: none;
   border-radius: 40px;
   cursor: pointer;
+  color: white;
 }
 
 .restart:hover,
 .start:hover {
   transform: translateY(-2px);
-  background-color: rgb(245, 195, 130);
-  transition: all 0.5s;
+  background-color: rgba(27, 89, 37, 0.981);
+  transition: transform 0.5s;
 }
 
 .welcome {
@@ -168,11 +169,12 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     rgb(39, 41, 37),
     rgb(131, 148, 34)
-  );
+  ); */
+  background-color: rgb(195, 104, 13);
   width: 30%;
   font-size: 30px;
   color: rgb(255, 255, 255);
@@ -184,8 +186,8 @@
 }
 
 .numOfQues {
-  background-color: rgb(245, 204, 150);
-  padding: 15px 15px 15px 20px;
+  background-color: rgb(12, 47, 87);
+  padding: 15px;
   font-size: 20px;
   margin-left: 150px;
   margin-top: 4px;
@@ -196,6 +198,7 @@
   height: 10%;
   text-align: center;
   outline: none;
+  color: white;
 }
 
 .numOfQues::placeholder {
@@ -211,16 +214,18 @@
 .roller:visited {
   width: 15%;
   height: 10%;
-  font-size: 30px;
-  background-color: brown;
+  font-size: 20px;
+  background-color: rgb(51, 121, 200);
   color: white;
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .roller:hover {
-  background-color: red;
+  background-color: rgba(27, 30, 89, 0.981);
 }
 
 .decrease {

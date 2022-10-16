@@ -61,7 +61,7 @@ function pick(n, min, max) {
 }
 
 const randomNums = pick(15, 0, 15);
-console.log(randomNums);
+// console.log(randomNums);
 const randomAns = pick(4, 0, 4);
 console.log(randomAns);
 
@@ -73,8 +73,25 @@ const increase = document.querySelector('.increase');
 const decrease = document.querySelector('.decrease');
 const numofQues = document.querySelector('.numOfQues');
 
-increase.addEventListener('click', () => numofQues.value++);
-decrease.addEventListener('click', () => numofQues.value--);
+// increase.addEventListener('click', () => {
+//   if (numofQues.value >= 15) return;
+//   else {
+//     numofQues.value++;
+//     const randomNums = numofQues.value;
+//     console.log(randomNums);
+//     console.log(pick(randomNums, 0, 15));
+//   }
+// });
+
+// decrease.addEventListener('click', () => {
+//   if (numofQues.value <= 0) return;
+//   else {
+//     numofQues.value--;
+//     const randomNums = numofQues.value;
+//     console.log(randomNums);
+//     console.log(pick(randomNums, 0, 15));
+//   }
+// });
 
 const fetchQuestion = async () => {
   const response = await fetch('./data.json');
@@ -88,6 +105,11 @@ const fetchQuestion = async () => {
     return;
   }
   console.log(randomNums);
+  // console.log(randomNums[place]);
+  // console.log(randomAns[0]);
+  // console.log(randomAns[1]);
+  // console.log(randomAns[2]);
+  // console.log(randomAns[3]);
 
   const question = data.datas[`${randomNums[place]}`].question;
   const first = data.datas[`${randomNums[place]}`].answers[`${randomAns[0]}`];
@@ -111,7 +133,7 @@ const fetchQuestion = async () => {
 };
 fetchQuestion();
 
-allAnswers.forEach(ab =>
+answerTab.forEach(ab =>
   ab.addEventListener('click', e => {
     if (ab.innerHTML == correct) {
       result++;
