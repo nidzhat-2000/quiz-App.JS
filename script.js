@@ -43,82 +43,10 @@ const timerFun = () => {
 timerFun();
 */
 
-/*
-let place = 0;
-let result = 0;
-let correct;
-
-const fetchQuestion = async () => {
-  const response = await fetch('./data.json');
-  const data = await response.json();
-  // Fetch Part ⤴
-
-  // Finishh game ⤵
-  if (place == data.datas.length) {
-    app.classList.add('blur');
-    endGame.style.opacity = '1';
-    return;
-  }
-
-  ////////////////////////////////////////
-  const question = data.datas[`${place}`].question;
-  // console.log(question)
-  const answers = data.datas[`${place}`].answers;
-  // console.log(answers);
-  const first = data.datas[`${place}`].answers[0];
-  const second = data.datas[`${place}`].answers[1];
-  const third = data.datas[`${place}`].answers[2];
-  const fourth = data.datas[`${place}`].answers[3];
-  correct = data.datas[`${place}`].answers[data.datas[`${place}`].correctAns];
-  // console.log(correct);
-
-  questionTab.innerHTML = question;
-  answer1.innerHTML = first;
-  answer2.innerHTML = second;
-  answer3.innerHTML = third;
-  answer4.innerHTML = fourth;
-
-  place++;
-};
-fetchQuestion();
-
-// allAnswers.forEach(ab =>
-answerTab.forEach(ab =>
-  ab.addEventListener('click', e => {
-    if (e.target.innerHTML == correct) {
-      result++;
-
-      /////////////////////////////
-      // Result indicator ⤵
-      const percentage = (result / 15) * 100;
-      // CorrectAns ⤵
-      countedCorrect.innerHTML = result;
-      // Percentage Indicator
-      percentageTab.innerHTML = `Success ${
-        !String(percentage).endsWith('0') ? percentage.toFixed(1) : percentage
-      }%`;
-
-      questionDelayer();
-    } else {
-      questionDelayer();
-    }
-  })
-);
-
-const questionDelayer = () => {
-  setTimeout(() => {
-    fetchQuestion();
-    // timerFun();
-  }, 500);
-};
-*/
-
-/**/
 function pick(n, min, max) {
   var values = [],
     i = max;
-  while (i >= min) 
-  values.push(i--);
+  while (i >= min) values.push(i--);
   // console.log(values);
   var results = [];
   var maxIndex = max;
@@ -132,45 +60,45 @@ function pick(n, min, max) {
   return results;
 }
 
-
 const randomNums = pick(15, 0, 15);
 console.log(randomNums);
-const randomAns = pick(4,0,4)
+const randomAns = pick(4, 0, 4);
 console.log(randomAns);
 
 let place = 0;
 let result = 0;
 let correct;
 
+const increase = document.querySelector('.increase');
+const decrease = document.querySelector('.decrease');
+const numofQues = document.querySelector('.numOfQues');
+
+increase.addEventListener('click', () => numofQues.value++);
+decrease.addEventListener('click', () => numofQues.value--);
 
 const fetchQuestion = async () => {
   const response = await fetch('./data.json');
   const data = await response.json();
   // Fetch Part ⤴
 
-  // Finishh game ⤵
+  // Finish game ⤵
   if (place == randomNums.length) {
-    app.classList.add('blur');
-    endGame.style.opacity = '1';
+    app.style.visibility = 'hidden';
+    setTimeout(() => (endGame.style.visibility = 'visible'), 1000);
     return;
   }
   console.log(randomNums);
-  // console.log(randomNums[place]);
-  // console.log(`${randomNums[place]}`);
 
-  ////////////////////////////////////////
-  // console.log(`${randomNums[place]}`);
   const question = data.datas[`${randomNums[place]}`].question;
-  // const answers = data.datas[`${randomNums[place]}`].answers;
   const first = data.datas[`${randomNums[place]}`].answers[`${randomAns[0]}`];
   const second = data.datas[`${randomNums[place]}`].answers[`${randomAns[1]}`];
   const third = data.datas[`${randomNums[place]}`].answers[`${randomAns[2]}`];
-  const fourth = data.datas[`${randomNums[place]}`].answers[`${randomAns[3 ]}`];
+  const fourth = data.datas[`${randomNums[place]}`].answers[`${randomAns[3]}`];
   correct =
     data.datas[`${randomNums[place]}`].answers[
       data.datas[`${randomNums[place]}`].correctAns
     ];
-    console.log(correct);
+  // console.log(correct);
 
   questionTab.innerHTML = question;
   answer1.innerHTML = first;
@@ -188,12 +116,15 @@ allAnswers.forEach(ab =>
     if (ab.innerHTML == correct) {
       result++;
       // console.log(result);
+
       /////////////////////////////
       // Result indicator ⤵
-      const percentage = (result / 15) * 100;
-      // CorrectAns ⤵
+
+      // CorrectAns indicator ⤵
       countedCorrect.innerHTML = result;
-      // Percentage Indicator
+
+      // Percentage Indicator ⤵
+      const percentage = (result / 15) * 100;
       percentageTab.innerHTML = `Success ${
         !String(percentage).endsWith('0') ? percentage.toFixed(1) : percentage
       }%`;
@@ -207,28 +138,23 @@ allAnswers.forEach(ab =>
 
 const questionDelayer = () => {
   setTimeout(() => {
-    // intervalizer();
     fetchQuestion();
     // timerFun();
   }, 500);
 };
 
-
 // Restart game ⤵
 restart.addEventListener('click', e => window.location.reload());
 
-// console.log(pick(15, 0, 15));
+// Start Game ⤵
+const startGame = document.querySelector('.start');
+const welcomeTab = document.querySelector('.welcome');
 
-function randomArrayShuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
-var alphabet=["a","b","c","d","e"];
-// console.log( randomArrayShuffle(alphabet) );; 
+const starterGame = () => {
+  welcomeTab.style.visibility = 'hidden';
+  setTimeout(() => {
+    app.style.opacity = 1;
+  }, 500);
+};
+
+startGame.addEventListener('click', starterGame);

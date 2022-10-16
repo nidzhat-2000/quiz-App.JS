@@ -48,57 +48,27 @@
     },
     {
       "question": "Which doesn't include NeighbourCountry?",
-      "answers": [
-        "",
-        "Japan",
-        "Germany",
-        "Poland",
-        "Czech"
-      ],
+      "answers": ["", "Japan", "Germany", "Poland", "Czech"],
       "correctAns": 1
     },
     {
       "question": "Which is impossible ?",
-      "answers": [
-        "",
-        "26/09/2022",
-        "31/04/2017",
-        "28/02/2014",
-        "30/08/2016"
-      ],
+      "answers": ["", "26/09/2022", "31/04/2017", "28/02/2014", "30/08/2016"],
       "correctAns": 2
     },
     {
       "question": "Eiffel Tower places in ?",
-      "answers": [
-        "",
-        "Paris",
-        "Viana",
-        "Berlin",
-        "Madrid"
-      ],
+      "answers": ["", "Paris", "Viana", "Berlin", "Madrid"],
       "correctAns": 1
     },
     {
       "question": "The biggest Country ?",
-      "answers": [
-        "",
-        "USA",
-        "CANADA",
-        "RUSSIA",
-        "BRASIL"
-      ],
+      "answers": ["", "USA", "CANADA", "RUSSIA", "BRASIL"],
       "correctAns": 3
     },
     {
       "question": "The highest top of Mountain ?",
-      "answers": [
-        "",
-        "Kangchenjunga",
-        "Lhotse",
-        "Everest",
-        "Makalu"
-      ],
+      "answers": ["", "Kangchenjunga", "Lhotse", "Everest", "Makalu"],
       "correctAns": 3
     },
     {
@@ -116,22 +86,16 @@
       "question": "What is the highest-rated film on IMDb?",
       "answers": [
         "",
-        "GOD FATHER",
+        "God Father",
         "Shaswank redemption",
         "Forest Gump",
         "Green Mile"
       ],
-      "correctAns": 1
+      "correctAns": 2
     },
     {
       "question": "Which one is not olmypics race?",
-      "answers": [
-        "",
-        "Kickboxing",
-        "Boxing",
-        "Swimming",
-        "Judo"
-      ],
+      "answers": ["", "Kickboxing", "Boxing", "Swimming", "Judo"],
       "correctAns": 1
     }
   ]
