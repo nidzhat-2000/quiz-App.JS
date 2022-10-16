@@ -15,7 +15,6 @@ const answer1 = document.querySelector('.first');
 const answer2 = document.querySelector('.second');
 const answer3 = document.querySelector('.third');
 const answer4 = document.querySelector('.fourth');
-const allAnswers = [answer1, answer2, answer3, answer4];
 const startGame = document.querySelector('.start');
 const welcomeTab = document.querySelector('.welcome');
 const increase = document.querySelector('.increase');
