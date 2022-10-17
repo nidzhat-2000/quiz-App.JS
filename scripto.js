@@ -2,25 +2,28 @@
 
 ////////////////////////////////////////////////////////////////
 // Elements ⤵
-const timer = document.querySelector('.timer');
-const questionTab = document.querySelector('.question');
-const answers = document.querySelector('.answers');
-const answerTab = document.querySelectorAll('.answer');
-const restart = document.querySelector('.restart');
-const endGame = document.querySelector('.result');
-const app = document.querySelector('.app');
-const countedCorrect = document.querySelector('.correct');
-const percentageTab = document.querySelector('.percentage');
-const answer1 = document.querySelector('.first');
-const answer2 = document.querySelector('.second');
-const answer3 = document.querySelector('.third');
-const answer4 = document.querySelector('.fourth');
-const startGame = document.querySelector('.start');
 const welcomeTab = document.querySelector('.welcome');
+const startGame = document.querySelector('.start');
 const increase = document.querySelector('.increase');
 const decrease = document.querySelector('.decrease');
 const numofQues = document.querySelector('.numOfQues');
 const sualSay = document.querySelector('.sualSay');
+
+const app = document.querySelector('.app');
+
+const questionTab = document.querySelector('.question');
+const answers = document.querySelector('.answers');
+const answerTab = document.querySelectorAll('.answer');
+const answer1 = document.querySelector('.first');
+const answer2 = document.querySelector('.second');
+const answer3 = document.querySelector('.third');
+const answer4 = document.querySelector('.fourth');
+const timer = document.querySelector('.timer');
+
+const endGame = document.querySelector('.result');
+const countedCorrect = document.querySelector('.correct');
+const percentageTab = document.querySelector('.percentage');
+const restart = document.querySelector('.restart');
 
 ////////////////////////////////////////////////////////////////
 // Array Random Maker ⤵
@@ -91,7 +94,8 @@ const questionDelayer = () => {
 
 ////////////////////////////////////////////////////////////////
 // Setting numbers of Questions ⤵
-increase.addEventListener('click', () => {
+
+const increaser = () => {
   if (numofQues.value >= 15) return;
   else {
     const randomNums = numofQues.value++;
@@ -100,9 +104,12 @@ increase.addEventListener('click', () => {
     trying2 = pick(numberItself, 0, 15);
     sualSay.textContent = trying2.length;
   }
-});
+};
 
-decrease.addEventListener('click', () => {
+increase.addEventListener('click', increaser);
+document.addEventListener('keydown', e => e.key === '+' && increaser());
+
+const decreaser = () => {
   if (numofQues.value <= 1) return;
   else {
     const randomNums = numofQues.value--;
@@ -111,7 +118,10 @@ decrease.addEventListener('click', () => {
     trying2 = pick(numberItself, 0, 15);
     sualSay.textContent = trying2.length;
   }
-});
+};
+
+decrease.addEventListener('click', decreaser);
+document.addEventListener('keydown', e => e.key === '-' && decreaser());
 
 /////////////////////////////////////////////////////////////////
 // Result indicator ⤵
